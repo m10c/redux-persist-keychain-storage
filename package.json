@@ -1,6 +1,6 @@
 {
   "name": "redux-persist-keychain-storage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Storage engine for redux-persist, which can store sensitive data on the iOS/Android Keychain/Keystore, by wrapping react-native-keychain",
   "keywords": [
     "react-native",
