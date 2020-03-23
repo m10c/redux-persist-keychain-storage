@@ -1,0 +1,25 @@
+{
+  "name": "redux-persist-keychain-storage",
+  "version": "0.1.0",
+  "description": "Storage engine for redux-persist, which can store sensitive data on the iOS/Android Keychain/Keystore, by wrapping react-native-keychain",
+  "keywords": [
+    "react-native",
+    "keychain",
+    "keystore",
+    "redux",
+    "redux-persist",
+    "secure"
+  ],
+  "bugs": {
+    "url": "https://github.com/m10c/redux-persist-keychain-storage/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m10c/redux-persist-keychain-storage.git"
+  },
+  "main": "src/index.js",
+  "peerDependencies": {
+    "react-native": "*",
+    "react-native-keychain": "*"
+  }
+}
