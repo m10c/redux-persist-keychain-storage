@@ -1,5 +1,8 @@
 # redux-persist-keychain-storage
 
+[![npm version](https://img.shields.io/npm/v/redux-persist-keychain-storage.svg)](https://www.npmjs.com/package/redux-persist-keychain-storage)
+[![license](https://img.shields.io/github/license/m10c/redux-persist-keychain-storage.svg)](https://opensource.org/licenses/MIT)
+
 Storage engine for [`redux-persist`](https://github.com/rt2zz/redux-persist),
 which can store sensitive data on the iOS/Android Keychain/Keystore,
 by wrapping [`react-native-keychain`](https://github.com/oblador/react-native-keychain).
@@ -27,14 +30,14 @@ so it's recommended to only use this with very minimal reducers,
 e.g. one that just stores key authentication data.
 
 ```js
-import { createEncryptedStorage } from 'redux-persist-keychain-storage';
+import { createKeychainStorage } from 'redux-persist-keychain-storage';
 
-const encryptedStorage = createEncryptedStorage();
+const keychainStorage = createKeychainStorage();
 
 const persistConfig = {
   // Keychain expects a reverse domain name qualifier (app bundle ID) style key
-  keyPrefix: 'com.myapp.',
-  storage: encryptedStorage,
+  keyPrefix: 'com.myapp.persist.',
+  storage: keychainStorage,
 };
 
 const mainReducer = combineReducers({
@@ -44,4 +47,4 @@ const mainReducer = combineReducers({
 
 ### Persist encryption key on the keychain, reducer data encrypted on AsyncStorage
 
-*To be implement*
+*To be implemented, API along lines of: `import { createEncryptedStorage } from 'redux-persist-keychain-storage/crypt`*
